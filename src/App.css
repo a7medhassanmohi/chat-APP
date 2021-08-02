@@ -1,0 +1,219 @@
+/* nav */
+
+html.light {
+  --white: white;
+  --mainColor: #e03392;
+  --grayText: #b2aab9;
+  --balck: black;
+  --hoverColor: #fde9f5
+}
+
+html.dark {
+  --white: #36393f;
+  --mainColor: #e03392;
+  --grayText: #b2aab9;
+  --balck: white;
+  --hoverColor: rgba(201, 196, 196, 0.356)
+}
+
+body {
+  background-color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: 1px -17px 13px 11px #b3b1b1;
+  padding: 13px;
+  z-index: 20;
+  top: 0;
+  transition: all 0.2s linear;
+}
+
+.nav h4 {
+  color: var(--mainColor);
+  font-size: 30px;
+  margin: 0;
+  font-weight: bold;
+  transition: all 0.2s linear;
+}
+
+.nav .navBtn {
+  width: 30%;
+  text-align: end;
+}
+
+.nav .navBtn button {
+  color: var(--mainColor);
+  background-color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.nav .navBtn svg {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.nav .navBtn button:hover {
+  color: var(--white);
+  background-color: var(--mainColor);
+}
+
+/* channel */
+
+.channel {
+  min-height: 100vh;
+  margin-top: 68px;
+  margin-bottom: 68px;
+  overflow: auto;
+  background-color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.channel .welcome {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.channel .welcome h2 {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  color: var(--balck);
+  font-size: 39px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: all 0.2s linear;
+}
+
+.channel .welcome h6 {
+  color: var(--grayText);
+  margin-bottom: 12px;
+}
+
+.channel .line {
+  text-align: center;
+  width: 80%;
+  height: 1px;
+  margin: auto;
+  background-color: var(--grayText);
+  margin-bottom: 20px;
+}
+
+.channel form {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  z-index: 10;
+  background-color: white;
+}
+
+.channel form input {
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+.channel form button {
+  color: var(--mainColor);
+  transition: all 0.2s linear;
+  margin-left: -30px;
+  transition: all 0.2s linear;
+}
+
+.channel form button:hover {
+  color: var(--white);
+  background-color: var(--mainColor);
+}
+
+.mainContent {
+  height: 80%;
+  background-color: var(--white);
+}
+
+.maincontentItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.maincontentItem .img {
+  width: 7%;
+}
+
+.maincontentItem .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.maincontentItem .message {
+  width: 80%;
+  overflow-wrap: break-word;
+  margin: 0 13px;
+  transition: all 0.2s linear;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.maincontentItem .message.me {
+  background-color: var(--hoverColor);
+}
+
+.maincontentItem .message h4 {
+  color: var(--mainColor);
+}
+
+.maincontentItem .message p {
+  color: var(--balck);
+  font-size: 16px;
+}
+
+.maincontentItem:hover .message {
+  background-color: var(--hoverColor);
+}
+
+.signin {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin button {
+  background-color: var(--mainColor);
+  padding: 10px;
+  color: white;
+  width: 30%;
+  font-size: 22px;
+  transition: all 0.2s linear
+}
+
+.signin button:hover {
+  color: var(--white);
+  background-color: var(--mainColor);
+}
+
+@media screen and (max-width:832px) {
+  .maincontentItem .message {
+    width: 80%;
+  }
+  .maincontentItem .img {
+    width: 20%;
+  }
+}
